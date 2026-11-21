@@ -23,3 +23,9 @@ manager.display_products()
 
 # Displaying total inventory value
 print("Total inventory value:", manager.total_inventory_value(), "RSD")
+# Removing a product
+manager.remove_product("Keyboard")
+
+# Displaying updated products
+print("UPDATED PRODUCT LIST:")
+manager.display_products()
