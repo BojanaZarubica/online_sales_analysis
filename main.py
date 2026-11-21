@@ -6,8 +6,8 @@ from product_manager import ProductManager
 manager = ProductManager()
 
 # Creating products
-product1 = Product("Laptop", 85000, 5)
-product2 = Product("Smartphone", 60000, 10)
+product1 = Product("Gaming Laptop", 85000, 3)
+product2 = Product("Samsung Phone", 60000, 10)
 product3 = Product("Headphones", 8000, 15)
 product4 = Product("Keyboard", 4500, 8)
 
@@ -17,12 +17,6 @@ manager.add_product(product2)
 manager.add_product(product3)
 manager.add_product(product4)
 
-# Displaying all products
-print("AVAILABLE PRODUCTS:")
-manager.display_products()
-
-# Displaying total inventory value
-print("Total inventory value:", manager.total_inventory_value(), "RSD")
 # Removing a product
 manager.remove_product("Keyboard")
 
