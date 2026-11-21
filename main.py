@@ -1,6 +1,7 @@
-
+import random
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
 
 # Creating product manager
 manager = ProductManager()
@@ -29,3 +30,19 @@ manager.remove_product("Keyboard")
 # Displaying updated products
 print("UPDATED PRODUCT LIST:")
 manager.display_products()
+# Creating shopping cart
+cart = Cart()
+
+# Randomly selecting three products
+selected_products = random.sample(manager.products, 3)
+
+# Adding selected products to cart
+for product in selected_products:
+    cart.add_to_cart(product)
+
+# Displaying cart contents
+print("\nSHOPPING CART:")
+cart.display_cart()
+
+# Displaying total cart value
+print("Total cart value:", cart.calculate_total(), "RSD")
